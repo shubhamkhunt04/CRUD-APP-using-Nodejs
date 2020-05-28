@@ -1,0 +1,18 @@
+/*================ scrolling effect============== */
+html{
+  scroll-behavior: smooth;
+}
+
+/*================ Font Settings ============== */
+
+body {
+  /* padding: 50px; */
+  font-family: 'Muli', sans-serif;
+}
+/*================ Navbar Color ============= */  
+.bg-color
+{
+  background-color: #7952B3;
+  color: #EDE7F5;
+}
+

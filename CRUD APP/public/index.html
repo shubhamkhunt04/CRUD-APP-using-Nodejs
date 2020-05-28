@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- font cnd -->
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap" rel="stylesheet">
+  <!-- main style -->
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" href="./stylesheets/zoom.css">
+  <!-- icon cdn -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <!-- navbar start -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-color fixed-top">
+    <a class="navbar-brand font-weight-bold text-light" href="#">CRUD APP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active zoom" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        </li>
+      </ul>
+      <button type="button" class="btn btn-outline-light mx-2" data-toggle="modal" data-target="#signup">
+        Sign Up
+      </button>
+      <button type="button" class="btn btn-outline-warning mx-2" data-toggle="modal" data-target="#login">
+        Login
+      </button>
+    </div>
+  </nav>
+
+  <!-- navbar end  -->
+
+  
+  <!-- signup landing page start -->
+  <!-- Modal -->
+  <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="registrationAlert"></div>
+          <form method="POST">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter your username" autocomplete="off">
+              <div id="userError"></div>
+      
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email address" autocomplete="off">
+              <div id="emailError"></div>
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile Number</label>
+              <input type="number" class="form-control" id="mobile" placeholder="Enter your contact number"
+                autocomplete="off">
+              <div id="mobileError"></div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter your password" autocomplete="off">
+              <div id="passwordError"></div>
+            </div>
+            <div class="form-group">
+              <label for="cpassword">Confirm Password</label>
+              <input type="password" class="form-control" id="cpassword" placeholder="Enter your password" autocomplete="off">
+              <div id="cpasswordError"></div>
+            </div>
+         </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="ssignup">Sign Up</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- signup landing page end -->
+
+
+  <!-- login landing page start -->
+  <!-- Modal -->
+
+  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="loginAlert"></div>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Username</label>
+              <input type="text" class="form-control" id="lusername" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="lpassword" placeholder="Enter your password" autocomplete="off">
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="loginBtn">Login</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- login landing page end -->
+  
+ <!-- about start -->
+
+  <div class="jumbotron jumbotron-fluid backcolor mt-3" id="aboutid">
+    <div class="container text-center bg-dark text-white">
+      <h1 class="mb-3">Hello Elaunch Solution</h1>
+      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error aliquam aut veritatis quibusdam nobis reprehenderit incidunt commodi. Eaque hic incidunt cupiditate? Assumenda quos doloribus id illum architecto, commodi deleniti?</p>
+    </div>
+  </div>
+
+    <hr class="pt-5">
+  <!-- footer start -->
+
+  <footer class="mt-1">
+    <div class="text-center">
+      <p>© Copyright 2020 By Shubham Khunt <span><a href="./privacypolicy.html"
+            style="text-decoration: underline;color: black;">Privacy Policy</a></span></p>
+    </div>
+  </footer>
+  <!-- footer end -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+    <script src="./javascripts/usersignup.js"></script>
+    <script src="./javascripts/userlogin.js"></script>
+</body>
+
+</html>

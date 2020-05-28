@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- font cnd -->
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap" rel="stylesheet">
+    <!-- main style -->
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/zoom.css">
+</head>
+<style>
+    h1 {
+        margin-top: 6%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    h1 strong {
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    #editdelete {
+        display: flex;
+        max-width: 30%;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <!-- navbar start -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-color fixed-top">
+        <a class="navbar-brand font-weight-bold text-light" href="#">CRUD APP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active zoom" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                </li>
+            </ul>
+
+            <button type="button" class="btn btn-outline-warning mx-2" id="userlogout">
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- navbar end  -->
+
+
+    <!-- when edit button clicked this modal popup -->
+    <div id="editmodal"></div>
+
+    <h1>
+        <strong>User Information</strong>
+    </h1>
+
+        <!-- when user is edit or delete then show it appropriate message like delete successfull,update successfull -->
+        <div id="editdeleteAlert"></div>    
+
+    <!-- fetch dynamically user data and show on page -->
+    <div id="userinfo"></div>
+
+
+    <!-- dynamically show modal  -->
+    <div id="editdelete">
+        <div class="mt-4">
+            <button type="button" class="btn btn-primary m-4" id="edit" data-toggle="modal" data-target="#editBtn">Edit
+                Information</button>
+            <button type="button" class="btn btn-danger m-4" id="delete">Delete Account</button>
+        </div>
+    </div>
+
+
+    <!-- footer start -->
+
+    <footer class="mt-1">
+        <div class="text-center">
+            <p>© Copyright 2020 By Shubham Khunt. <span><a href="./privacypolicy.html"
+                        style="text-decoration: underline;color: black;">Privacy Policy</a></span></p>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+<script src="./javascripts/userdatas.js"></script>
+<script src="./javascripts/logout.js"></script>
+
+</html>
