@@ -6,7 +6,7 @@ var User = new Schema({
 
     email: {
         type: String,
-        maxlength:20
+        maxlength:40
 
     },
     mobile: {
